@@ -83,33 +83,3 @@ that have been published.
 Please replace this README file with information about your specific project. You can keep
 the `Developing.md` and `Publishing.md` files as useful references, but please set some
 proper description in the README.
-
-
-xiond tx wasm store artifacts/newc.wasm --from xionowner --gas-prices 0.1uxion --gas auto --gas-adjustment 1.3 -y --output json -b block
-
-xiond tx wasm store artifacts/newc.wasm \
-  --chain-id xion-local-testnet-1 \
-  --gas-adjustment 1.3 \
-  --gas-prices 0.001uxion \
-  --gas auto \
-  --chain-id xion-testnet-1 \
-  --node https://rpc.xion-testnet-1.burnt.com:443 \
-  --from xion1844yvxc82ar5msd3qap44fjrfxnrxlw8586r7y
-
-
-  
-  protocol
-  1216
-  xion1azlcqsf8d7x57kfj3ffzal3qw7l2tsag937g5q6nxhgfce06c2jq4zl83t
-
-  xiond tx wasm instantiate 1216 '{"owner": "xion1844yvxc82ar5msd3qap44fjrfxnrxlw8586r7y","denom" :"ibc/57097251ED81A232CE3C9D899E7C8096D6D87EF84BA203E12E424AA4C9B57A64" ,"price" : "1" ,"decimals" : "6" , "max_mint" :"365000000000" }' --from xion1844yvxc82ar5msd3qap44fjrfxnrxlw8586r7y --chain-id xion-testnet-1 --gas auto --gas-adjustment 1.3 --gas-prices 0.001uxion --node https://rpc.xion-testnet-1.burnt.com:443 --label "FracitFirst" --no-admin
-
-
-  xiond tx wasm execute "xion1azlcqsf8d7x57kfj3ffzal3qw7l2tsag937g5q6nxhgfce06c2jq4zl83t" '{"set_config" : {"protocol_token": "xion1ykp5zsqdn0ffcqygfpnr6l8zkeldy622q56pp7aey6fnkr6vfwts20qknv"} }' --from xion1844yvxc82ar5msd3qap44fjrfxnrxlw8586r7y --chain-id https://rpc.xion-testnet-1.burnt.com:443 --gas auto --gas-prices 0.001uxion --node https://rpc.xion-testnet-1.burnt.com:443
-
-  cw20
-  1217
-  xion1ykp5zsqdn0ffcqygfpnr6l8zkeldy622q56pp7aey6fnkr6vfwts20qknv
-
-
-  xiond tx wasm instantiate 1217 '{"name": "Fractible STA","symbol" :"FSTA" ,"decimals" : 6 ,"initial_balances":[],"mint":{"minter":"xion1azlcqsf8d7x57kfj3ffzal3qw7l2tsag937g5q6nxhgfce06c2jq4zl83t"}}' --from xion1844yvxc82ar5msd3qap44fjrfxnrxlw8586r7y --chain-id xion-testnet-1 --gas auto --gas-adjustment 1.3 --gas-prices 0.001uxion --node https://rpc.xion-testnet-1.burnt.com:443 --label "FracitFirstToken" --no-admin
